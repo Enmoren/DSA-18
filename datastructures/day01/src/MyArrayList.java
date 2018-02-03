@@ -2,41 +2,75 @@ public class MyArrayList {
     private Cow[] elems;
     private int size;
 
-    // TODO: Runtime: O(?)
+    // TODO: Runtime: O(1)
     public MyArrayList() {
-        // TODO
+        this.elems = new Cow [10];
+        this.size=0;
     }
 
-    // TODO: Runtime: O(?)
+    // TODO: Runtime: O(1)
     public MyArrayList(int capacity) {
-        // TODO
+        this.elems = new Cow [capacity];
+        this.size = 0;
     }
 
-    // TODO: Runtime: O(?)
-    public void add(Cow c) {
-        // TODO
+    // TODO: Runtime: O(1)
+    public boolean add(Cow c) {
+        if (size >= elems.length) {
+            Cow[] elems2 = new Cow[elems.length * 2];
+            System.arraycopy(elems, 0, elems2, 0, elems.length );
+            elems = elems2;
+        }
+        this.elems[size] = c;
+        this.size++;
+        return true;
     }
 
-    // TODO: Runtime: O(?)
+    // TODO: Runtime: O(1)
     public int size() {
-        // TODO
-        return -1;
+        return this.size;
     }
 
-    // TODO: Runtime: O(?)
+    // TODO: Runtime: O(1)
     public Cow get(int index) {
-        // TODO
-        return null;
+        if (index < 0 || index >= this.size) {
+            throw new IndexOutOfBoundsException();
+        }
+        return this.elems[index];
     }
 
-    // TODO: Runtime: O(?)
-    public Cow remove(int index) {
-        // TODO
-        return null;
-    }
 
-    // TODO: Runtime: O(?)
+    // TODO: Runtime: O(n)
     public void add(int index, Cow c) {
-        // TODO
+        if (index < 0 || index > this.size){
+            throw new IndexOutOfBoundsException();
+        }
+        add(c);
+        for (int i=this.size-1; i>index; i--) {
+            this.elems[i] = this.elems[i - 1];
+        }
+        this.elems[index] = c;
+
     }
+
+    // TODO: Runtime: O(n)
+    public Cow remove(int index) {
+        if (index < 0 || index >= this.size) {
+
+            throw new IndexOutOfBoundsException("index is out of array bounds");
+        }
+        Cow cow = this.elems[index];
+        for (int i = index; i < size - 1; i++) {
+            elems[i] = elems[i + 1];
+        }
+        this.size--;
+
+        if (size < 0.25 * elems.length) {
+            Cow[] elems2 = new Cow[elems.length / 2];
+            System.arraycopy(elems, 0, elems2, 0, elems.length / 2);
+            elems = elems2;
+        }
+        return cow;
+    }
+
 }

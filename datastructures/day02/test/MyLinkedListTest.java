@@ -39,7 +39,7 @@ public class MyLinkedListTest {
     @Test
     public void testGet() {
         assertEquals(GEORGY, chickens.get(1));
-        assertEquals(LILY, chickens.get(2));
+        assertEquals(DELILAH, chickens.get(0));
     }
 
     @Test
