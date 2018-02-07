@@ -18,7 +18,11 @@ public class InfixToPostfixNoParensTest {
 
     @Test
     public void infixToPostfixCaseThree() {
+<<<<<<< HEAD
         assertEquals("2 3 1 + * ", Problems.infixToPostfix("2 * ( 3 + 1 )"));
+=======
+        assertEquals("2 3 1 + *", Problems.infixToPostfix("2 * ( 3 + 1 )"));
+>>>>>>> 78bf0f8575d48fe7b45feeaad5ec2af1e4147035
     }
 
 

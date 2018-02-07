@@ -1,5 +1,14 @@
 # Day03 - Linear data structures review
 
+<<<<<<< HEAD
+=======
+# Learning Goals
+
+- Think critically about how to use linear data structures covered so far (Arrays, ArrayLists, Stacks, Queues, LinkedLists) to write efficient algorithms
+- Analyze runtime and space complexity of algorithms
+- Begin developing an approach to solving algorithm problems
+
+>>>>>>> 78bf0f8575d48fe7b45feeaad5ec2af1e4147035
 # Problems
 
 ## Remove K Digits
