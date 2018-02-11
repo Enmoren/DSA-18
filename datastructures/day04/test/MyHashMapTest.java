@@ -43,7 +43,7 @@ public class MyHashMapTest {
 
     @Test
     public void testContainsValue() {
-        assertEquals(true, map.containsValue(3));
+        assertEquals(true, map.containsValue(2));
         assertEquals(true, map.containsValue(null));
         assertEquals(false, map.containsValue(4));
     }
@@ -77,7 +77,6 @@ public class MyHashMapTest {
         assertEquals(1, (int) map.put("One", 11));
         assertEquals(4, map.size());
         assertEquals(11, (int) map.get("One"));
-
         assertEquals(null, map.put("Five", 5));
         assertEquals(5, map.size());
         assertEquals(5, (int) map.get("Five"));

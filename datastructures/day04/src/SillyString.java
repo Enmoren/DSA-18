@@ -1,3 +1,4 @@
+import java.nio.channels.AcceptPendingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,6 +21,7 @@ public class SillyString {
     @Override
     public int hashCode() {
         // TODO What is bad about this hash function??
+
         int total = 0;
         for (int i=0; i<innerString.length(); i++) {
             total += innerString.charAt(i);
@@ -31,7 +33,7 @@ public class SillyString {
      * @param args
      */
     public static void main(String[] args) {
-        SillyString first = new SillyString("Hello");
+        SillyString first = new SillyString("wordl");
         SillyString second = new SillyString("World");
 
         System.out.println(first.hashCode());
