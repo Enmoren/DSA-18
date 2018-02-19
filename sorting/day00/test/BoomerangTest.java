@@ -7,7 +7,10 @@ public class BoomerangTest {
     @Test
     public void boomerangCaseOne() {
         // Case 1: Empty list of points
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8b27a4e8a67573005ee1bc7871daf23fb550f8c1
         int[][] points = new int[][]{};
         assertEquals(0, Boomerang.numberOfBoomerangs(points));
     }

@@ -3,6 +3,7 @@ public class InsertionSort extends SortAlgorithm {
     /**
      * Use the insertion sort algorithm to sort the array
      *
+<<<<<<< HEAD
      * Best-case runtime: O(N) Insert element in a sorted array
      * Worst-case runtime: O(N^2) Array in reversed order
      * Average-case runtime: O(N^2)
@@ -22,5 +23,18 @@ public class InsertionSort extends SortAlgorithm {
             }
         }
         return arr;
+=======
+     * TODO
+     * Best-case runtime:
+     * Worst-case runtime:
+     * Average-case runtime:
+     *
+     * Space-complexity:
+     */
+    @Override
+    public int[] sort(int[] array) {
+        // TODO
+        return new int[0];
+>>>>>>> 8b27a4e8a67573005ee1bc7871daf23fb550f8c1
     }
 }

@@ -16,7 +16,11 @@ By doing this assignment, you should be able to:
 
 ### Sorts
 
+<<<<<<< HEAD
 - Draw the recursive trees (see [here](https://docs.google.com/presentation/d/1hJTO3d5spM1QZKrWfw5P5u_nkAtMmQEFYrKT-Dbah3M/edit?usp=sharing)) of the merge sort algorithm for the input array `[4,8,62,9,14,19]`. Show (a photo of) this to your NINJA at checkoff.
+=======
+- Draw the recursive trees (see [here](https://drive.google.com/open?id=1hJTO3d5spM1QZKrWfw5P5u_nkAtMmQEFYrKT-Dbah3M)) of the merge sort algorithm for the input array `[4,8,62,9,14,19]`. Show (a photo of) this to your NINJA at checkoff.
+>>>>>>> 8b27a4e8a67573005ee1bc7871daf23fb550f8c1
 - In `InsertionSort.java` and `MergeSort.java` complete the `sort` method.
 - For each `sort` function, detail the best, worst, and average case runtime complexity, as well as the space complexity, in the comments.
 

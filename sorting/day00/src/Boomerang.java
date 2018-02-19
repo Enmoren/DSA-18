@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,6 +26,13 @@ public class Boomerang {
         int dx = a[0] - b[0];
         int dy = a[1] - b[1];
         return dx*dx + dy*dy;
+=======
+public class Boomerang {
+
+    public static int numberOfBoomerangs(int[][] points) {
+        // TODO
+        return 0;
+>>>>>>> 8b27a4e8a67573005ee1bc7871daf23fb550f8c1
     }
 }
 

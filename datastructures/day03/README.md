@@ -8,7 +8,14 @@
 - Analyze runtime and space complexity of algorithms
 - Begin developing an approach to solving algorithm problems
 
+<<<<<<< HEAD
 >>>>>>> 78bf0f8575d48fe7b45feeaad5ec2af1e4147035
+=======
+## Resources
+
+- Problem solving guide:  [NFFSSSSSS](https://drive.google.com/open?id=1K1AIHLVg6HOh6qhXTkvFwOiAebhcPfkcT6aJuBmdSQQ)
+
+>>>>>>> 8b27a4e8a67573005ee1bc7871daf23fb550f8c1
 # Problems
 
 ## Remove K Digits

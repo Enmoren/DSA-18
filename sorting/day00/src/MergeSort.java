@@ -8,6 +8,7 @@ public class MergeSort extends SortAlgorithm {
      * a left and a right portion, sort them, and then merge them together.
      * Use Insertion Sort if the length of the array is <= INSERTION_THRESHOLD
      *
+<<<<<<< HEAD
      * Best-case runtime: O(n log n)
      * Worst-case runtime:O(n log n)
      * Average-case runtime:O(n log n)
@@ -40,11 +41,27 @@ public class MergeSort extends SortAlgorithm {
         }
         return arr;
     }
+=======
+     * TODO
+     * Best-case runtime:
+     * Worst-case runtime:
+     * Average-case runtime:
+     *
+     * Space-complexity:
+     */
+    @Override
+    public int[] sort(int[] array) {
+        // TODO
+        return new int[0];
+    }
+
+>>>>>>> 8b27a4e8a67573005ee1bc7871daf23fb550f8c1
     /**
      * Given two sorted arrays a and b, return a new sorted array containing
      * all elements in a and b. A test for this method is provided in `SortTest.java`
      */
     public int[] merge(int[] a, int[] b) {
+<<<<<<< HEAD
         int length = a.length+b.length;
         int merge[] = new int [length];
         int aindex = 0;
@@ -83,6 +100,10 @@ public class MergeSort extends SortAlgorithm {
             }
         }
         return merge;
+=======
+        // TODO
+        return new int[0];
+>>>>>>> 8b27a4e8a67573005ee1bc7871daf23fb550f8c1
     }
 
 }
