@@ -2,31 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20655894-5909-45ed-ae9d-9222811a7f91" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/day01.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HeapSort.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Problems.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/QuickSort.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/SortAlgorithm.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tests/HeapSortTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tests/ProblemsTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tests/SortTest.java" />
-      <change beforePath="$PROJECT_DIR$/../../datastructures/day00/README.md" afterPath="$PROJECT_DIR$/../../datastructures/day00/README.md" />
-      <change beforePath="$PROJECT_DIR$/../../datastructures/day01/README.md" afterPath="$PROJECT_DIR$/../../datastructures/day01/README.md" />
-      <change beforePath="$PROJECT_DIR$/../../datastructures/day02/README.md" afterPath="$PROJECT_DIR$/../../datastructures/day02/README.md" />
-      <change beforePath="$PROJECT_DIR$/../../datastructures/day03/README.md" afterPath="$PROJECT_DIR$/../../datastructures/day03/README.md" />
-      <change beforePath="$PROJECT_DIR$/../../datastructures/day04/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../datastructures/day04/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../../datastructures/day04/README.md" afterPath="$PROJECT_DIR$/../../datastructures/day04/README.md" />
-      <change beforePath="$PROJECT_DIR$/../day00/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../day00/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../day00/README.md" afterPath="$PROJECT_DIR$/../day00/README.md" />
-      <change beforePath="$PROJECT_DIR$/../day00/day00.iml" afterPath="$PROJECT_DIR$/../day00/day00.iml" />
-      <change beforePath="$PROJECT_DIR$/../day00/src/Boomerang.java" afterPath="$PROJECT_DIR$/../day00/src/Boomerang.java" />
-      <change beforePath="$PROJECT_DIR$/../day00/src/InsertionSort.java" afterPath="$PROJECT_DIR$/../day00/src/InsertionSort.java" />
-      <change beforePath="$PROJECT_DIR$/../day00/src/MergeSort.java" afterPath="$PROJECT_DIR$/../day00/src/MergeSort.java" />
-      <change beforePath="$PROJECT_DIR$/../day00/test/BoomerangTest.java" afterPath="$PROJECT_DIR$/../day00/test/BoomerangTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../day02/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../day02/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../day02/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../day02/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../day02/day02.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../day02/src/FrequencyPrint.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../day02/src/LargestSubArray.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../day02/src/LocksAndKeys.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../day02/src/TripleSum.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../day02/tests/FrequencyPrintTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../day02/tests/LargestSubArrayTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../day02/tests/LocksAndKeysTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../day02/tests/TripleSumTest.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -133,7 +122,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="496" />
     <option name="y" value="215" />
     <option name="width" value="956" />
@@ -141,7 +130,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -154,33 +143,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="day01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day01" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day01" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../datastructures/day04" />
@@ -452,7 +415,8 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="496" y="215" width="956" height="904" extended-state="0" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -542,6 +506,130 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/QuickSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HeapSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="54" column="28" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+          <folding>
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/SortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3735#3736#0" expanded="true" />
+            <element signature="e#3776#3777#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ProblemsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/HeapSortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#7020#7021#0" expanded="true" />
+            <element signature="e#7060#7061#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuickSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HeapSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="54" column="28" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+          <folding>
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/SortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3735#3736#0" expanded="true" />
+            <element signature="e#3776#3777#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ProblemsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/HeapSortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#7020#7021#0" expanded="true" />
+            <element signature="e#7060#7061#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/QuickSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
