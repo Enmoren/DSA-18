@@ -1,7 +1,8 @@
 import java.util.Arrays;
 
 public class TripleSum {
-
+//runtime: O(N^2)
+//Space complexity: O(1)
     static int tripleSum(int arr[], int sum) {
         int l, r;
         Arrays.sort(arr);
