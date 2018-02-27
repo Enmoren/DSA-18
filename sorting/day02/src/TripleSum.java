@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.Arrays;
 
 public class TripleSum {
@@ -28,5 +29,12 @@ public class TripleSum {
             }
         }
         return count;
+=======
+public class TripleSum {
+
+    static int tripleSum(int arr[], int sum) {
+        // TODO
+        return 0;
+>>>>>>> 6d575f706f119b08b97decb6f08819793baa6f35
     }
 }

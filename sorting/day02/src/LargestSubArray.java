@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,5 +44,12 @@ public class LargestSubArray {
         }
         int[] subarray ={startindex,endindex};
         return subarray;
+=======
+
+public class LargestSubArray {
+    static int[] largestSubarray(int[] nums) {
+        // TODO
+        return new int[]{0, 0};
+>>>>>>> 6d575f706f119b08b97decb6f08819793baa6f35
     }
 }
