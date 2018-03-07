@@ -145,7 +145,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             TreeNode p = n.parent;
             while (p != null && n == p.rightChild) {
                 n = p;
-                p = p.parent;
+                p = n.parent;
             }
             return p;
         }
