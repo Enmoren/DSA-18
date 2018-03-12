@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.LinkedList;
+=======
+>>>>>>> 2bba5d6bcefc85757d2fcb149b0d1c59c9ab999d
 import java.util.List;
 
 public class BinarySearchTree<T extends Comparable<T>> {
@@ -29,6 +32,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             add(k);
     }
 
+<<<<<<< HEAD
     //O(n)runtime
     public List<T> inOrderTraversal() {
         List<T> res = new ArrayList<>();
@@ -46,6 +50,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
                 helper(root.rightChild, res);
             }
         }
+=======
+    public List<T> inOrderTraversal() {
+        // TODO
+        return null;
+>>>>>>> 2bba5d6bcefc85757d2fcb149b0d1c59c9ab999d
     }
 
     /**
@@ -77,6 +86,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         if (n.isLeaf())
             // Case 1: no children
             replacement = null;
+<<<<<<< HEAD
         else if (n.hasRightChild() != n.hasLeftChild()) {
             // Case 2: one child
             replacement = (n.hasRightChild()) ? n.rightChild : n.leftChild; // replacement is the non-null child
@@ -87,6 +97,15 @@ public class BinarySearchTree<T extends Comparable<T>> {
             replacement = minValue(n.rightChild);
             delete(minValue(n.rightChild));
             replacement.moveChildrenFrom(n);
+=======
+        else if (n.hasRightChild() != n.hasLeftChild())
+            // Case 2: one child
+            replacement = (n.hasRightChild()) ? n.rightChild : n.leftChild; // replacement is the non-null child
+        else {
+            // Case 3: two children
+            // TODO
+            replacement = null;
+>>>>>>> 2bba5d6bcefc85757d2fcb149b0d1c59c9ab999d
         }
 
         // Put the replacement in its correct place, and set the parent.
@@ -113,6 +132,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
         return null;
     }
+<<<<<<< HEAD
     //O(logN)runtime
     private TreeNode<T> findPredecessor(TreeNode<T> n) {
         if (n.leftChild!=null){
@@ -158,6 +178,17 @@ public class BinarySearchTree<T extends Comparable<T>> {
             current = current.leftChild;
         }
         return current;
+=======
+
+    private TreeNode<T> findPredecessor(TreeNode<T> n) {
+        // TODO
+        return null;
+    }
+
+    private TreeNode<T> findSuccessor(TreeNode<T> n) {
+        // TODO
+        return null;
+>>>>>>> 2bba5d6bcefc85757d2fcb149b0d1c59c9ab999d
     }
 
     /**

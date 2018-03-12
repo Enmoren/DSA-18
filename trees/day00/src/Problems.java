@@ -3,6 +3,7 @@ import java.util.*;
 public class Problems {
 
     public static BinarySearchTree<Integer> minimalHeight(List<Integer> values) {
+<<<<<<< HEAD
         BinarySearchTree<Integer> res = new BinarySearchTree<>();
 //        values.sort(Integer::compareTo);
         Collections.sort(values);
@@ -33,6 +34,10 @@ public class Problems {
         /* Recursively construct the right subtree and make it
          right child of root */
         sortedArrayToBST(res,value, mid + 1, end);
+=======
+        // TODO
+        return new BinarySearchTree<>();
+>>>>>>> 2bba5d6bcefc85757d2fcb149b0d1c59c9ab999d
     }
 
     public static boolean isIsomorphic(TreeNode n1, TreeNode n2) {
