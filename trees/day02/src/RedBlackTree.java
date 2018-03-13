@@ -98,7 +98,6 @@ public class RedBlackTree<T extends Comparable<T>> extends BinarySearchTree<T> {
         } else if (h.key.compareTo(key) > 0) {
             h.leftChild = insert(h.leftChild, key);
         }
-
         h = balance(h);
         return h;
     }
