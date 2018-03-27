@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import java.security.KeyStore;
+=======
+>>>>>>> 179ed10b89c2cb714ec49768add995d8dfb87909
 import java.util.NoSuchElementException;
 
 
@@ -29,6 +32,7 @@ public class RedBlackTree<T extends Comparable<T>> extends BinarySearchTree<T> {
 
     // make a left-leaning link lean to the right
     TreeNode<T> rotateRight(TreeNode<T> h) {
+<<<<<<< HEAD
         TreeNode<T> x = h.leftChild;
         TreeNode<T> beta = x.rightChild;
         h.leftChild = beta;
@@ -36,10 +40,15 @@ public class RedBlackTree<T extends Comparable<T>> extends BinarySearchTree<T> {
         x.color = h.color;
         h.color = true;
         return x;
+=======
+        // TODO
+        return h;
+>>>>>>> 179ed10b89c2cb714ec49768add995d8dfb87909
     }
 
     // make a right-leaning link lean to the left
     TreeNode<T> rotateLeft(TreeNode<T> h) {
+<<<<<<< HEAD
         TreeNode<T> x = h.rightChild;
         TreeNode<T> beta = x.leftChild;
         h.rightChild = beta;
@@ -47,13 +56,21 @@ public class RedBlackTree<T extends Comparable<T>> extends BinarySearchTree<T> {
         x.color = h.color;
         h.color = true;
         return x;
+=======
+        // TODO
+        return h;
+>>>>>>> 179ed10b89c2cb714ec49768add995d8dfb87909
     }
 
     // flip the colors of a TreeNode and its two children
     TreeNode<T> flipColors(TreeNode<T> h) {
+<<<<<<< HEAD
         h.color = h.leftChild.color;
         h.leftChild.color = !h.leftChild.color;
         h.rightChild.color = !h.rightChild.color;
+=======
+        // TODO
+>>>>>>> 179ed10b89c2cb714ec49768add995d8dfb87909
         return h;
     }
 
@@ -66,6 +83,7 @@ public class RedBlackTree<T extends Comparable<T>> extends BinarySearchTree<T> {
      * return balanced node
      */
     private TreeNode<T> balance(TreeNode<T> h) {
+<<<<<<< HEAD
 
         if (h.rightChild != null && h.rightChild.color){
             if (h.leftChild==null||!h.leftChild.color){
@@ -78,12 +96,16 @@ public class RedBlackTree<T extends Comparable<T>> extends BinarySearchTree<T> {
         if (h.rightChild != null&& h.leftChild!=null&& h.leftChild.color&&h.rightChild.color){
             h = flipColors(h);
         }
+=======
+        // TODO
+>>>>>>> 179ed10b89c2cb714ec49768add995d8dfb87909
         return h;
     }
 
 
     /**
      * Recursively insert a new node into the BST
+<<<<<<< HEAD
      * Runtime: O(logN)
      */
     @Override
@@ -99,6 +121,14 @@ public class RedBlackTree<T extends Comparable<T>> extends BinarySearchTree<T> {
             h.leftChild = insert(h.leftChild, key);
         }
         h = balance(h);
+=======
+     * Runtime: TODO
+     */
+    @Override
+    TreeNode<T> insert(TreeNode<T> h, T key) {
+        h = super.insert(h, key);
+        // TODO: use balance to correct for the three rotation cases
+>>>>>>> 179ed10b89c2cb714ec49768add995d8dfb87909
         return h;
     }
 
