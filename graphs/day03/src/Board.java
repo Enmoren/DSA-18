@@ -34,8 +34,8 @@ public class Board {
         if (num == 0) {
             return 0;
         }
-        int reali = (num % 3) - 1;
-        int realj = (num - 1) / 3;
+        int reali = (num - 1) / 3;
+        int realj = (num - 1) % 3;
         int result = Math.abs(i - reali) + Math.abs(j - realj);
         return result;
     }
@@ -46,9 +46,11 @@ public class Board {
         int sum = 0;
         for (int i = 0; i < this.size(); i++) {
             for (int j = 0; j < this.size(); j++) {
+//                System.out.print(manhattanDifference(i,j));
                 sum += manhattanDifference(i,j);
             }
         }
+        sum += manhattanDifference(0, 1);
         return sum;
     }
 
@@ -56,7 +58,9 @@ public class Board {
      * Compare the current state to the goal state
      */
     public boolean isGoal() {
-        // TODO: Your code here
+        if (this.tiles.equals(goal)) {
+            return true;
+        }
         return false;
     }
 
