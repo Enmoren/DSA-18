@@ -11,13 +11,13 @@ public class Board {
 
     //TODO
     // Create a 2D array representing the solved board state
-    private int[][] goal = {{}};
+    private int[][] goal = {{1,2,3},{4,5,6},{7,8,0}};
 
     /*
      * Set the global board size and tile state
      */
     public Board(int[][] b) {
-        // TODO: Your code here
+        this.tiles = b;
     }
 
     /*
@@ -25,16 +25,31 @@ public class Board {
      (equal to 3 for 8 puzzle, 4 for 15 puzzle, 5 for 24 puzzle, etc)
      */
     private int size() {
-        // TODO: Your code here
-        return 0;
+        return this.tiles.length;
     }
 
+
+    public int manhattanDifference(int i, int j) {
+        int num = this.tiles[i][j];
+        if (num == 0) {
+            return 0;
+        }
+        int reali = (num % 3) - 1;
+        int realj = (num - 1) / 3;
+        int result = Math.abs(i - reali) + Math.abs(j - realj);
+        return result;
+    }
     /*
      * Sum of the manhattan distances between the tiles and the goal
      */
     public int manhattan() {
-        // TODO: Your code here
-        return 0;
+        int sum = 0;
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < this.size(); j++) {
+                sum += manhattanDifference(i,j);
+            }
+        }
+        return sum;
     }
 
     /*
