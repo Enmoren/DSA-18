@@ -68,8 +68,26 @@ public class Board {
      * Research how to check this without exploring all states
      */
     public boolean solvable() {
-        // TODO: Your code here
-        return false;
+        // format board into 1D array
+        int flat[] = new int[this.size() * this.size()];
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < this.size(); j++) {
+                flat[i + j] = this.tiles[i][j];
+            }
+        }
+
+        // count number of inversions
+        int inversions = 0;
+        for (int i = 0; i < flat.length; i++) {
+            for (int j = i+1; j < flat.length; j++) {
+                if (flat[i] > flat[j]) {
+                    inversions++;
+                }
+            }
+        }
+
+        // check if number of inversions is even
+        return (inversions % 2 == 0);
     }
 
     /*
