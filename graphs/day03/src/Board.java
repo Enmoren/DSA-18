@@ -1,6 +1,3 @@
-import java.util.LinkedList;
-import java.util.List;
-
 /**
  * Board definition for the 8 Puzzle challenge
  */
@@ -28,15 +25,17 @@ public class Board {
         return this.tiles.length;
     }
 
-
-    public int manhattanDifference(int i, int j) {
+    /*
+     * Returns the manhattan distance for an individual number
+     */
+    private int manhattanDistance(int i, int j) {
         int num = this.tiles[i][j];
         if (num == 0) {
             return 0;
         }
-        int reali = (num - 1) / 3;
-        int realj = (num - 1) % 3;
-        int result = Math.abs(i - reali) + Math.abs(j - realj);
+        int finali = (num - 1) / this.size();
+        int finalj = (num - 1) % this.size();
+        int result = Math.abs(i - finali) + Math.abs(j - finalj);
         return result;
     }
     /*
@@ -46,11 +45,11 @@ public class Board {
         int sum = 0;
         for (int i = 0; i < this.size(); i++) {
             for (int j = 0; j < this.size(); j++) {
-//                System.out.print(manhattanDifference(i,j));
-                sum += manhattanDifference(i,j);
+//                System.out.print(manhattanDistance(i,j));
+                sum += manhattanDistance(i,j);
             }
         }
-        sum += manhattanDifference(0, 1);
+        sum += manhattanDistance(0, 1);
         return sum;
     }
 
