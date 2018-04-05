@@ -21,7 +21,7 @@ public class NQueens {
      */
 
 
-    //Time: O (N!)
+    //Time: O (N!*N^2)
     //Space: N^2
     public static boolean checkDiagonal(char[][] board, int r, int c) {
         int y = r - 1;

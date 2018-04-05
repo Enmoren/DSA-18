@@ -3,8 +3,8 @@ import java.util.List;
 
 public class CoinsOnAClock {
 
-    //Time: O （n^3?)
-    //Space: O (n^2)
+    //Time: O （3^N)
+    //Space: O (N)
     private static char[] copyOf(char[] A) {
         char[] B = new char[A.length];
         System.arraycopy(A, 0, B, 0, A.length);
