@@ -59,10 +59,18 @@ public class Board {
      * Compare the current state to the goal state
      */
     public boolean isGoal() {
-        if (this.equals(goal)) {
-            return true;
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < this.size(); j++) {
+                if (this.tiles[i][j] != this.goal[i][j]) {
+                    return false;
+                }
+            }
         }
-        return false;
+        return true;
+//        if (this.equals(new Board(this.goal))) {
+//            return true;
+//        }
+//        return false;
     }
 
     /*

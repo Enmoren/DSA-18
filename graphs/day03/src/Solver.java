@@ -79,13 +79,14 @@ public class Solver {
         while (open.peek() != null) {
             State q = open.poll();
             Iterable<State> successors = neighbors(q);
+            Set<State> ignored = new HashSet<>();
 
             for (State u: successors) {
                 if (u.board.isGoal()) {
                     this.minMoves = u.moves;
-                    break;
+                    return;
                 }
-                Set<State> ignored = new HashSet<>();
+
                 // check if u is in open, and has less cost1
                 for (State n :open) {
                     if (n.equals(u) && n.totalCost() < u.totalCost()) {
@@ -139,7 +140,6 @@ public class Solver {
      * Research how to check this without exploring all states
      */
     public boolean isSolvable() {
-        // TODO: Your code here
         return false;
     }
 
@@ -168,6 +168,7 @@ public class Solver {
         Board initial = new Board(initState);
 
         Solver solver = new Solver(initial);
+        System.out.print(solver.minMoves);
     }
 
 
