@@ -68,6 +68,10 @@ public class Solver {
      * and a identify the shortest path to the the goal state
      */
     public Solver(Board initial) {
+        if (!initial.solvable()) {
+            return;
+        }
+
         Queue<State> open = new PriorityQueue<>(5, (a,b) -> a.totalCost() - b.totalCost());
         List<State> closed = new LinkedList<>();
         open.add(new State(initial, 0, null));

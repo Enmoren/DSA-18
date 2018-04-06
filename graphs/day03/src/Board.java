@@ -60,7 +60,7 @@ public class Board {
      * Compare the current state to the goal state
      */
     public boolean isGoal() {
-        if (this.tiles.equals(goal)) {
+        if (this.equals(goal)) {
             return true;
         }
         return false;
@@ -75,7 +75,7 @@ public class Board {
         int flat[] = new int[this.size() * this.size()];
         for (int i = 0; i < this.size(); i++) {
             for (int j = 0; j < this.size(); j++) {
-                flat[i + j] = this.tiles[i][j];
+                flat[i*3 + j] = this.tiles[i][j];
             }
         }
 
@@ -83,7 +83,7 @@ public class Board {
         int inversions = 0;
         for (int i = 0; i < flat.length; i++) {
             for (int j = i+1; j < flat.length; j++) {
-                if (flat[i] > flat[j]) {
+                if (flat[i] > flat[j] && flat[j] != 0) {
                     inversions++;
                 }
             }
@@ -98,8 +98,16 @@ public class Board {
     }
 
     private Board swapTile(int i0, int j0, int i, int j) {
+        // create deep copy of tiles
+        int tilesCopy[][] = new int[this.size()][this.size()];
+        for (int k = 0; k < this.size(); k++) {
+            for (int l = 0; l < this.size(); l++) {
+                tilesCopy[k][l] = this.tiles[k][l];
+            }
+        }
+
         // create a new board to modify
-        Board swapBoard = new Board(this.tiles);
+        Board swapBoard = new Board(tilesCopy);
 
         // replace 0 with tile
         swapBoard.tiles[i0][j0] = swapBoard.tiles[i][j];
@@ -117,12 +125,12 @@ public class Board {
         // locate i and j for zero
         int i0 = 0;
         int j0 = 0;
-        for (int i = 0; i < this.size(); i++) {
-            for (int j = 0; j < this.size(); j++) {
+        rows: for (int i = 0; i < this.size(); i++) {
+            cols: for (int j = 0; j < this.size(); j++) {
                 if (this.tiles[i][j] == 0) {
                     i0 = i;
                     j0 = j;
-                    break;
+                    break rows;
                 }
             }
         }
