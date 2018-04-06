@@ -90,11 +90,31 @@ public class Board {
         return (inversions % 2 == 0);
     }
 
+    private boolean isValidTile(int i, int j) {
+        return (i >= 0 && j >= 0 && i < this.size() && j < this.size());
+    }
     /*
      * Return all neighboring boards in the state tree
      */
+
     public Iterable<Board> neighbors() {
-        // TODO: Your code here
+        // locate i and j for zero
+        int i0;
+        int j0;
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < this.size(); j++) {
+                if (this.tiles[i][j] == 0) {
+                    i0 = i;
+                    j0 = j;
+                    break;
+                }
+            }
+        }
+
+        // iterate through all possible moves for sliding
+        
+
+
         return null;
     }
 
