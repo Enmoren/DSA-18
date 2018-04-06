@@ -52,7 +52,6 @@ public class Board {
                 sum += manhattanDistance(i,j);
             }
         }
-        sum += manhattanDistance(0, 1);
         return sum;
     }
 
