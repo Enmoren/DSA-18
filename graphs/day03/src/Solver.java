@@ -84,6 +84,7 @@ public class Solver {
             for (State u: successors) {
                 if (u.board.isGoal()) {
                     this.minMoves = u.moves;
+                    this.solved = true;
                     return;
                 }
 
@@ -140,7 +141,7 @@ public class Solver {
      * Research how to check this without exploring all states
      */
     public boolean isSolvable() {
-        return false;
+        return this.solved;
     }
 
     /*
