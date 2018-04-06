@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Board definition for the 8 Puzzle challenge
  */
@@ -93,14 +96,27 @@ public class Board {
     private boolean isValidTile(int i, int j) {
         return (i >= 0 && j >= 0 && i < this.size() && j < this.size());
     }
+
+    private Board swapTile(int i0, int j0, int i, int j) {
+        // create a new board to modify
+        Board swapBoard = new Board(this.tiles);
+
+        // replace 0 with tile
+        swapBoard.tiles[i0][j0] = swapBoard.tiles[i][j];
+
+        // replace old tile with 0
+        swapBoard.tiles[i][j] = 0;
+
+        return swapBoard;
+    }
+
     /*
      * Return all neighboring boards in the state tree
      */
-
     public Iterable<Board> neighbors() {
         // locate i and j for zero
-        int i0;
-        int j0;
+        int i0 = 0;
+        int j0 = 0;
         for (int i = 0; i < this.size(); i++) {
             for (int j = 0; j < this.size(); j++) {
                 if (this.tiles[i][j] == 0) {
@@ -112,10 +128,23 @@ public class Board {
         }
 
         // iterate through all possible moves for sliding
-        
+        List<Board> boards = new LinkedList<>();
 
+        // slide rows
+        for (int i = -1; i < 2; i+=2) { // first i = -1, then i = 1
+            if (isValidTile(i0 + i, j0)) {
+                boards.add(swapTile(i0, j0, i0 + i, j0));
+            }
+        }
 
-        return null;
+        // slide columns
+        for (int j = -1; j < 2; j+=2) {
+            if (isValidTile(i0, j0+j)) {
+                boards.add(swapTile(i0, j0, i0, j0 + j));
+            }
+        }
+
+        return boards;
     }
 
     /*
