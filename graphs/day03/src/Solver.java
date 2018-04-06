@@ -68,7 +68,6 @@ public class Solver {
      * and a identify the shortest path to the the goal state
      */
     public Solver(Board initial) {
-        // TODO: Your code here
         Queue<State> open = new PriorityQueue<>(5, (a,b) -> a.totalCost() - b.totalCost());
         List<State> closed = new LinkedList<>();
         open.add(new State(initial, 0, null));
@@ -79,7 +78,7 @@ public class Solver {
 
             for (State u: successors) {
                 if (u.board.isGoal()) {
-                    //TODO: figure out stop search
+                    this.minMoves = u.moves;
                     break;
                 }
                 Set<State> ignored = new HashSet<>();
