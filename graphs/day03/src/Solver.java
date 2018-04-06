@@ -41,6 +41,11 @@ public class Solver {
             if (!(s instanceof State)) return false;
             return ((State) s).board.equals(this.board);
         }
+
+        @Override
+        public int hashCode() {
+            return this.board.tiles.hashCode();
+        }
     }
 
     /*
@@ -73,11 +78,14 @@ public class Solver {
         }
 
         Queue<State> open = new PriorityQueue<>(5, (a,b) -> a.totalCost() - b.totalCost());
-        List<State> closed = new LinkedList<>();
+        Map<State, Integer> openMap = new HashMap<>();
+        Map<State, Integer> closed = new HashMap();
         open.add(new State(initial, 0, null));
 
         while (open.peek() != null) {
             State q = open.poll();
+            openMap.remove(q);
+
             Iterable<State> successors = neighbors(q);
             Set<State> ignored = new HashSet<>();
 
@@ -89,51 +97,22 @@ public class Solver {
                 }
 
                 // check if u is in open, and has less cost1
-                for (State n :open) {
-                    if (n.equals(u) && n.totalCost() < u.totalCost()) {
+                if (openMap.containsKey(u)) {
+                    if (openMap.get(u) < u.totalCost()) {
+                        ignored.add(u);
+                    }
+                } else if (closed.containsKey(u)) {
+                    if (closed.get(u) < u.totalCost()) {
                         ignored.add(u);
                     }
                 }
-                for (State n :closed) {
-                    if (n.equals(u) && n.totalCost() < u.totalCost()) {
-                        ignored.add(u);
-                    }
-                }
+
                 if (!ignored.contains(u)) {
                     open.add(u);
                 }
             }
-            closed.add(q);
+            closed.put(q, q.totalCost());
         }
-
-        //// A*
-        //open = [ ]
-        //closed = [ ]
-        //open.add(START); START.f = 0
-        //
-        //while (!open.isEmpty()) {
-        //    q = open.pop(node with smallest f)
-        //
-        //    for each successor u of q {
-        //        if u is GOAL: stop search
-        //
-        //        u.g = q.g + distance(q, u)
-        //        u.h = heuristic_distance(u, GOAL)
-        //        u.f = u.g + u.h
-        //
-        //        for n in open:
-        //             if (n.equals(u) && n.f < u.f) ignore u
-        //        for n in closed:
-        //             if (n.equals(u) && n.f < u.f) ignore u
-        //
-        //        If u not ignored:
-        //             open.add(u)
-        //       	u.parent = q
-        //
-        //    } // for
-        //
-        //    closed.add(q)
-        //} // while
     }
 
     /*

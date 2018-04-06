@@ -18,7 +18,7 @@ public class Board {
      */
     public Board(int[][] b) {
         this.tiles = b;
-    }
+        }
 
     /*
      * Size of the board 
@@ -67,10 +67,6 @@ public class Board {
             }
         }
         return true;
-//        if (this.equals(new Board(this.goal))) {
-//            return true;
-//        }
-//        return false;
     }
 
     /*
