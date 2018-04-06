@@ -30,6 +30,10 @@ public class Solver {
             cost = 0;
         }
 
+        public int totalCost() {
+            return this.moves + this.cost;
+        }
+
         @Override
         public boolean equals(Object s) {
             if (s == this) return true;
@@ -47,6 +51,17 @@ public class Solver {
         return null;
     }
 
+    private Iterable<State> neighbors(State q) {
+        Iterable<Board> boards = q.board.neighbors();
+        List<State> states = new LinkedList<>();
+        for (Board board: boards) {
+            State u = new State(board, q.moves + 1, q);
+            u.cost = u.board.manhattan();
+            states.add(u);
+        }
+        return states;
+    }
+
     /*
      * A* Solver
      * Find a solution to the initial board using A* to generate the state tree
@@ -54,6 +69,55 @@ public class Solver {
      */
     public Solver(Board initial) {
         // TODO: Your code here
+        Queue<State> open = new PriorityQueue<>(5, (a,b) -> a.totalCost() - b.totalCost());
+        List<State> closed = new LinkedList<>();
+        open.add(new State(initial, 0, null));
+
+        while (open.peek() != null) {
+            State q = open.poll();
+            Iterable<State> successors = neighbors(q);
+
+            for (State u: successors) {
+                if (u.board.isGoal()) {
+                    //TODO: figure out stop search
+                    break;
+                }
+
+                // check if u is in open, and has less cost1
+
+                // check if u is in closed, and has less cost
+
+            }
+        }
+
+        //// A*
+        //open = [ ]
+        //closed = [ ]
+        //open.add(START); START.f = 0
+        //
+        //while (!open.isEmpty()) {
+        //    q = open.pop(node with smallest f)
+        //
+        //    for each successor u of q {
+        //        if u is GOAL: stop search
+        //
+        //        u.g = q.g + distance(q, u)
+        //        u.h = heuristic_distance(u, GOAL)
+        //        u.f = u.g + u.h
+        //
+        //        for n in open:
+        //             if (n.equals(u) && n.f < u.f) ignore u
+        //        for n in closed:
+        //             if (n.equals(u) && n.f < u.f) ignore u
+        //
+        //        If u not ignored:
+        //open.add(u)
+        //       	u.parent = q
+        //
+        //    } // for
+        //
+        //    closed.add(q)
+        //} // while
     }
 
     /*
