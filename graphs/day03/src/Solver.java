@@ -82,12 +82,23 @@ public class Solver {
                     //TODO: figure out stop search
                     break;
                 }
-
+                Set<State> ignored = new HashSet<>();
                 // check if u is in open, and has less cost1
-
-                // check if u is in closed, and has less cost
-
+                for (State n :open) {
+                    if (n.equals(u) && n.totalCost() < u.totalCost()) {
+                        ignored.add(u);
+                    }
+                }
+                for (State n :closed) {
+                    if (n.equals(u) && n.totalCost() < u.totalCost()) {
+                        ignored.add(u);
+                    }
+                }
+                if (!ignored.contains(u)) {
+                    open.add(u);
+                }
             }
+            closed.add(q);
         }
 
         //// A*
@@ -111,7 +122,7 @@ public class Solver {
         //             if (n.equals(u) && n.f < u.f) ignore u
         //
         //        If u not ignored:
-        //open.add(u)
+        //             open.add(u)
         //       	u.parent = q
         //
         //    } // for
