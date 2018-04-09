@@ -94,12 +94,14 @@ public class Solver {
                     return;
                 }
 
-                // check if u has lowest seen cost
+                // check if we have visited u
+                // if visited cost is higher than u
+                // re-visit u
                 if (minCostVisited.containsKey(u)) {
                     if (minCostVisited.get(u) > u.totalCost()) {
                         open.add(u);
                     }
-                } else {
+                } else { // we have never visited u - add to open
                     open.add(u);
                 }
             }
