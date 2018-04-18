@@ -27,12 +27,21 @@ public class RubiksCube {
 
     /**
      * return a hashCode for this rubik's cube.
+<<<<<<< HEAD
      * <p>
      * Your hashCode must follow this specification:
      * if A.equals(B), then A.hashCode() == B.hashCode()
      * <p>
      * Note that this does NOT mean:
      * if A.hashCode() == B.hashCode(), then A.equals(B)
+=======
+     *
+     * Your hashCode must follow this specification:
+     *   if A.equals(B), then A.hashCode() == B.hashCode()
+     *
+     * Note that this does NOT mean:
+     *   if A.hashCode() == B.hashCode(), then A.equals(B)
+>>>>>>> 7e1bffed36370760e3ff2e98cf7edec624928aaf
      */
     @Override
     public int hashCode() {
@@ -73,7 +82,11 @@ public class RubiksCube {
         return r;
     }
 
+<<<<<<< HEAD
     public static char[] getScramble(int size) {
+=======
+    public static char[] getScramble(int size){
+>>>>>>> 7e1bffed36370760e3ff2e98cf7edec624928aaf
         char[] listTurns = new char[size];
         for (int i = 0; i < size; i++) {
             switch (ThreadLocalRandom.current().nextInt(0, 6)) {
