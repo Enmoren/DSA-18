@@ -142,7 +142,6 @@ public class Solver {
     public static void main(String[] args) {
         int[][] initState = {{1, 2, 3}, {4, 5, 6}, {7, 8, 0}};
         Board initial = new Board(initState);
-
         Solver solver = new Solver(initial);
         System.out.print(solver.minMoves);
     }

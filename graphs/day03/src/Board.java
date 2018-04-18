@@ -48,7 +48,6 @@ public class Board {
         int sum = 0;
         for (int i = 0; i < this.size(); i++) {
             for (int j = 0; j < this.size(); j++) {
-//                System.out.print(manhattanDistance(i,j));
                 sum += manhattanDistance(i,j);
             }
         }
