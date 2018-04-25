@@ -2,8 +2,8 @@ import java.util.*;
 
 public class MCCR {
         public static int MCCR(EdgeWeightedGraph G) {
-            int total = 0;
 
+            int total = 0;
             //Initialization
             IndexPQ indexPQ = new IndexPQ(G.numberOfV());
             HashSet<Integer> inqueue = new HashSet<>();
@@ -20,10 +20,10 @@ public class MCCR {
             for (Iterator<Integer> it = vertices; it.hasNext(); ) {
                 int i = it.next();
                 //assign each Node's key to be infinite number
-                indexPQ.insert(i, 100000);
+                indexPQ.insert(i, 10000);
                 inqueue.add(i);
             }
-            
+
             while(!indexPQ.isEmpty()){
                 int u = indexPQ.delMin();
                 inqueue.remove(u);
