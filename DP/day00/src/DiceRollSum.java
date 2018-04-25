@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.HashMap;
 
 public class DiceRollSum {
@@ -20,6 +21,15 @@ public class DiceRollSum {
                 diceRollSumDP(n - 4, memo) + diceRollSumDP(n - 5, memo) + diceRollSumDP(n - 6, memo);
         memo.put(n, r);
         return r;
+=======
+public class DiceRollSum {
+
+    // Runtime: TODO
+    // Space: TODO
+    public static int diceRollSum(int N) {
+        // TODO
+        return 0;
+>>>>>>> 84f81784b5484b283d38d8900f42a8955698ad97
     }
 
 }

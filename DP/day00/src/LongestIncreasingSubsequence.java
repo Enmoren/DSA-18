@@ -1,5 +1,6 @@
 public class LongestIncreasingSubsequence {
 
+<<<<<<< HEAD
     // Runtime: N^2
     // Space: N
     public static int LIS(int[] A) {
@@ -30,5 +31,12 @@ public class LongestIncreasingSubsequence {
             longest = Math.max(longest, array[i]);
 
         return longest;
+=======
+    // Runtime: TODO
+    // Space: TODO
+    public static int LIS(int[] A) {
+        // TODO
+        return 0;
+>>>>>>> 84f81784b5484b283d38d8900f42a8955698ad97
     }
 }
